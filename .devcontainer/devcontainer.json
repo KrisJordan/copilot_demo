@@ -1,0 +1,20 @@
+{
+  "name": "Priority Queue Dev",
+  "image": "mcr.microsoft.com/devcontainers/python:3.12",
+  "postCreateCommand": "python -m pip install -U pip && python -m pip install -r requirements.txt -r requirements-dev.txt",
+  "customizations": {
+    "vscode": {
+      "settings": {
+        // Let the Python extension auto-detect the interpreter in the container
+        "python.testing.pytestEnabled": true,
+        "python.testing.pytestArgs": ["tests"],
+        "python.testing.unittestEnabled": false,
+        "python.analysis.typeCheckingMode": "strict"
+      },
+      "extensions": [
+        "ms-python.python",
+        "ms-python.vscode-pylance"
+      ]
+    }
+  }
+}

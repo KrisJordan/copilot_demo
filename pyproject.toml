@@ -1,0 +1,16 @@
+[tool.pytest.ini_options]
+addopts = "-q --strict-markers --maxfail=1 --cov=priority_queue --cov-report=term-missing --cov-fail-under=100"
+python_files = ["test_*.py"]
+
+[tool.coverage.run]
+source = ["priority_queue"]
+branch = true
+
+[tool.coverage.report]
+show_missing = true
+skip_covered = false
+
+[tool.black]
+target-version = ["py312"]
+line-length = 88
+include = "\\.(py|pyi)$"
