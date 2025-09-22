@@ -42,8 +42,17 @@ class PriorityQueue:
     def pop(self) -> Item:  # pragma: no cover - not yet implemented
         raise NotImplementedError
 
-    def peek(self) -> Item:  # pragma: no cover - not yet implemented
-        raise NotImplementedError
+    def peek(self) -> Item:
+        """Return the item with minimum priority without removing it.
+
+        Returns the first item in the queue (lowest priority).
+
+        Raises:
+            IndexError: If the queue is empty.
+        """
+        if not self._items:
+            raise IndexError("peek from empty priority queue")
+        return self._items[0]
 
     def __len__(self) -> int:  # pragma: no cover - not yet implemented
         raise NotImplementedError
