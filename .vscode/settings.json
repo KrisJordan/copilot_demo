@@ -1,0 +1,14 @@
+{
+  "python.testing.pytestEnabled": true,
+  "python.testing.pytestArgs": ["-q"],
+  "python.defaultInterpreterPath": "/usr/local/bin/python",
+  "mypy.runUsingActiveInterpreter": true,
+  "mypy.targetsAndArgs": [
+    {
+      "target": ".",
+      "args": ["--strict", "--config-file", "mypy.ini"]
+    }
+  ],
+  "editor.formatOnSave": true,
+  "files.trimTrailingWhitespace": true
+}
